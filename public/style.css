@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.top-navigation{
+    display:flex;
+    background:white;
+    padding: 4PX 0;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 2px 4px rgba(33,51,67,0.12);
+    
+
+}
+.nav-list{
+    width:70%;
+}
+
+.nav-list ul{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 4rem;
+    margin-right: 200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-list ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.nav-list ul li a:hover{
+    color: var(--color-secundario);
+    border-bottom: 3px solid var(--color-secundario);
+}
+
+.logo-container{
+    color: white;
+    width:30%;
+    margin-left: 100px;
+}
+
+.banner-container{
+    background-color: aquamarine;
+}
+.banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 400px;
+    margin: auto;
+    max-width: 70%;
+}
+
+
+
+:root {
+    --color-primario: #ff3d3d;
+    --color-secundario: #ff8700;
+    --color-fondo: #1a1a1a;
+  }
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.title-question{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    padding: 20px 0px;
+}
+
+.song{
+    width: 100%;
+    background-color: var(--color-primario) ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top:10px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    justify-content: space-between;
+    max-width: 350px;
+    transition: transform 0.5s ease-out;
+}
+
+.artist{
+    width: 100%;
+    background-color: var(--color-primario) ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top:10px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    max-width: 350px;
+    transition: transform 0.5s ease-out;
+}
+.artist:hover{
+    transform: translateX(42px);
+    background-color: var(--color-secundario);
+}
+
+.artist span{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.artist:hover span{
+    color: var(--color-fondo);
+}
+
+span{
+    font-size: 12px;
+}
+.song-title{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.song:hover{
+    transform: translateX(42px);
+    background-color: var(--color-secundario);
+}
+
+.song:hover span{
+    color: var(--color-fondo);
+}
+.question-container{
+    max-width: 350px;
+    flex: 1;
+}
+
+.search{
+    width: 77%;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border: 2px solid var(--color-primario);
+  
+}
+
+.search-btn{
+    width: 20%;
+    height: 40px;
+    background-color:  var(--color-secundario);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.search-btn:hover{
+    
+    background-color:  var(--color-primario);
+}
+.section{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 3.5em;
+    align-items: end;
+}
+.favorite{
+    margin-top: 70px;
+    width: 200px;
+}
+.chosen-song{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    max-width: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.img-song{
+    height: 160px;
+    width: 180px;
+    margin-bottom: 20px;
+    box-shadow: #333 3px 3px 3px 3px;
+}
+
+audio{
+    width: 200px;
+}
+
+.favorite-artist-name, .favorite-artist-genre, .favorite-artist-link{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.favorite-artist-link{
+    padding:10px 20px;
+    width: fit-content;
+    text-align: center;
+    background-color: var(--color-secundario);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.chosen-artist{
+padding: 20px 0;
+border-radius: 15px;
+box-shadow: #333 3px 3px 3px;
+display: flex;
+flex-direction: column;
+gap: 1em;
+justify-content: center;
+align-items: center;
+background-color: rgba(227, 227, 227, 0.133);
+
+}
+
+#select_generos{ 
+        display: inline-block;
+        padding: 10px;
+        border: 2px solid var(--color-primario);
+        background-color: #f2f2f2;
+        color: #333;
+        font-size: 16px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+
+.loading-visible {
+    margin: auto;
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+.loading-hidden {
+    margin: auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#send-btn{
+    border: 2px solid var(--color-primario);
+    border-radius: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+    
+}
+#recomendationContainer{ 
+    background-color: var(--color-secundario);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f2f2f2;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#div-btn{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+#div-quisom{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 30px;
+}
+
+#div-quisom h2{
+    font-size: 30px;
+    padding: 20px 0px;
+}
+
+#div-recomanador{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 30px;
+    background-color: var(--color-secundario);
+    border-radius: 10px;
+}
+#div-recomanador h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+
+footer {
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-content h3 {
+    font-size: 1.6em;
+    color: #ff8700;
+}
+
+.footer-content .info, .footer-content .school {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.footer-content .social-link {
+    color: #ffffff;
+    font-size: 1.6em;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    font-size: 0.9em;
+    color: #ffffff;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff;
+}
+
+/*Baner*/
+.banner-container{
+    width: 100%;
+    background-image: url('https://i.ibb.co/HBh4Wcx/7293745.jpg');
+    background-size: cover;
+    background-position: center;height: 100vh;display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+  .contenido-banner {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .contenido-banner h2 {
+    font-size: 30px;
+    margin: 0;
+  }
+  
